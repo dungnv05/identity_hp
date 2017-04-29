@@ -1,0 +1,1 @@
+watchify src/javascripts/script.js -o public/javascripts/script.js -v

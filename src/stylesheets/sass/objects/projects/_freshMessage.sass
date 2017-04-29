@@ -1,0 +1,114 @@
+.p-message
+	&__upperImage
+		width: 100%
+		display: flex
+		justify-content: center
+		background: url($img-path+"konno01.jpg") center top / cover no-repeat
+	&__lowerImage
+		width: 100%
+		display: flex
+		justify-content: center
+		background: url($img-path+"/konno02.jpg") center top / cover no-repeat
+
+	&__content
+		&Upper
+			max-width: $content-width
+			width: 100%
+			display: flex
+			justify-content: flex-start
+			& img
+				display: none
+		&Lower
+			max-width: $content-width
+			width: 100%
+			display: flex
+			flex-direction: row-reverse
+			justify-content: space-between
+			& img
+				display: none
+	&__upper
+	&__lower
+		display: flex
+		flex-direction: row-reverse
+	&__box
+		&--left
+			margin: 200px 0 50px 0
+			width: 480px
+		&--right
+			margin: 80px 0 100px 0
+			width: 480px
+	&__subtitle
+		margin-bottom: 30px
+		padding-bottom: 15px
+		font-size: 2em
+		color: $theme-color
+		border-bottom: $theme-color 4px solid
+	&__profile
+		width: 400px
+		margin: auto auto 20px 0
+		padding: 20px 10px
+		background-color: #FFF
+		opacity: 0.8
+		&__name
+	
+			font-size: 24px
+			& .kana
+				font-size: 12px
+		&__position
+			font-size: 12px
+			color: #aaaaaa
+		&__career
+
+@media (max-width: 768px)
+	.p-message
+		margin-top: 80px
+		&__upperImage
+			background: none
+		&__lowerImage
+			background: none
+		&__content
+			&Upper
+				width: 90%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center		
+				& img
+					width: 100%
+					display: block
+					margin-bottom: 30px
+			&Lower
+				width: 90%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				& img
+					width: 100%
+					display: block		
+					margin-bottom: 10px
+		&__box
+			&--left
+				width: 100%
+				margin: 0 0 30px
+			&--right
+				width: 100%
+				margin: 0 0 30px
+		&__subtitle
+			font-size: 1.3em
+			margin-bottom: 20px
+			padding-bottom: 10px
+		&__detail
+			padding: 
+		&__profile
+			width: auto
+			margin: 0
+			padding: 0
+@media(min-width: 1280px)
+	.p-message
+		&__upperImage
+			height: 540px
+		&__lowerImage
+			height: 540px
+		&__box--left
+			margin-top: auto

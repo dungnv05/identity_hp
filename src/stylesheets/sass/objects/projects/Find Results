@@ -1,0 +1,172 @@
+Searching 84 files for "__triangle"
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/layout/_freshHeader.sass:
+  161  
+  162  
+  163: 				&__triangle.active
+  164  					width: 0
+  165  					margin: auto
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/layout/_header.sass:
+  131  				&--last
+  132  					margin-right: 0
+  133: 				&__triangle.active
+  134  					width: 0
+  135  					margin: auto
+  ...
+  138  					border-width: 5px 5px 0px 5px
+  139  					border-color: $theme-color transparent transparent transparent
+  140: 				&__triangle.active.invisible
+  141  					border-color: transparent
+  142  	#service
+  ...
+  255  				&--long
+  256  					font-size: 95%
+  257: 				&__triangle.active
+  258  					width: 0
+  259  					margin: auto
+
+4 matches across 2 files
+
+
+Searching 84 files for "__triangle"
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/layout/_freshHeader.sass:
+  161  
+  162  
+  163: 				&__triangle.active
+  164  					width: 0
+  165  					margin: auto
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/layout/_header.sass:
+  131  				&--last
+  132  					margin-right: 0
+  133: 				&__triangle.active
+  134  					width: 0
+  135  					margin: auto
+  ...
+  138  					border-width: 5px 5px 0px 5px
+  139  					border-color: $theme-color transparent transparent transparent
+  140: 				&__triangle.active.invisible
+  141  					border-color: transparent
+  142  	#service
+  ...
+  255  				&--long
+  256  					font-size: 95%
+  257: 				&__triangle.active
+  258  					width: 0
+  259  					margin: auto
+
+4 matches across 2 files
+
+
+Searching 84 files for "__triagle"
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_company.sass:
+   40  		margin-bottom: 20px
+   41  		text-align: right
+   42: 	&__triagle
+   43  		border-top: 20px solid #fff
+   44  		margin-top: 50px
+   ..
+   69  			margin-top: 55px
+   70  			height: 375px
+   71: 		&__triagle
+   72  			border-top: 15px solid #fff
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_contact.sass:
+   50  			margin-top: 20px
+   51  			margin-bottom: 40px
+   52: 	&__triagle
+   53  		border-top: 20px solid $background-color
+   54  		margin-top: 50px
+   ..
+   81  		&__input
+   82  			line-height: 1
+   83: 		&__triagle
+   84  			border-top: 15px solid $background-color
+   85  
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_philosophy.sass:
+   26  		letter-spacing: 1px
+   27  		padding-top: 20px
+   28: 	&__triagle
+   29  		border-top: 20px solid $theme-color
+   30  		margin-top: 50px
+   ..
+   44  		&__desc
+   45  			font-size: 86%
+   46: 		&__triagle
+   47  			border-top: 15px solid $theme-color
+   48  		&__subTitle
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_service.sass:
+   55  			&:first-of-type
+   56  				margin-top: 0
+   57: 	&__triagle
+   58  		border-top: 20px solid $background-color
+   59  		margin-top: 50px
+   ..
+  112  				margin-top: 130px
+  113  				margin-bottom: 0
+  114: 		&__triagle
+  115  			border-top: 15px solid $background-color
+  116  
+
+8 matches across 4 files
+
+
+Searching 84 files for "__triagle"
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_company.sass:
+   40  		margin-bottom: 20px
+   41  		text-align: right
+   42: 	&__triagle
+   43  		border-top: 21px solid #fff
+   44  		margin-top: 50px
+   ..
+   69  			margin-top: 55px
+   70  			height: 375px
+   71: 		&__triagle
+   72  			border-top: 16px solid #fff
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_contact.sass:
+   50  			margin-top: 20px
+   51  			margin-bottom: 40px
+   52: 	&__triagle
+   53  		border-top: 21px solid $background-color
+   54  		margin-top: 50px
+   ..
+   81  		&__input
+   82  			line-height: 1
+   83: 		&__triagle
+   84  			border-top: 16px solid $background-color
+   85  
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_philosophy.sass:
+   26  		letter-spacing: 1px
+   27  		padding-top: 20px
+   28: 	&__triagle
+   29  		border-top: 21px solid $theme-color
+   30  		margin-top: 50px
+   ..
+   44  		&__desc
+   45  			font-size: 86%
+   46: 		&__triagle
+   47  			border-top: 16px solid $theme-color
+   48  		&__subTitle
+
+/Users/mac_ndung/Identity/work/programing/Identity/dung/src/stylesheets/sass/objects/projects/_service.sass:
+   55  			&:first-of-type
+   56  				margin-top: 0
+   57: 	&__triagle
+   58  		border-top: 21px solid $background-color
+   59  		margin-top: 50px
+   ..
+  112  				margin-top: 130px
+  113  				margin-bottom: 0
+  114: 		&__triagle
+  115  			border-top: 16px solid $background-color
+  116  
+
+8 matches across 4 files

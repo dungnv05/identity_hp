@@ -1,0 +1,22 @@
+.c-arrow
+    &__wrapper
+        margin: 20px
+    &__label
+    &--right
+        position: relative
+        display: inline-block
+        padding-left: 20px
+        &::before
+            content: ''
+            width: 12px
+            height: 12px
+            border: 0px
+            border-top: solid 2px $theme-color
+            border-right: solid 2px $theme-color
+            -ms-transform: rotate(45deg)
+            -webkit-transform: rotate(45deg)
+            transform: rotate(45deg)
+            position: absolute
+            top: 50%
+            left: 15px
+            margin-top: -12px

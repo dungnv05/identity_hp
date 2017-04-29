@@ -1,0 +1,94 @@
+.c-btn
+	border: 1px #A9A9A9 solid
+	border-radius: 30px
+	padding: 7px 0
+	color: #000
+	cursor: pointer
+	& > *
+		vertical-align: middle
+	&--full
+		width: 100%
+	& i.fa-angle-right
+		padding-bottom: 2px
+		font-size: 235%
+	& i.fa-clone
+		@include fa-icon-rotate(270deg, 3)
+		padding-left: 5px
+		padding-bottom: 0
+
+	&__img
+		margin-bottom: 5px
+		width: 210px
+		& img
+			height: $font-size * 1.5
+			width: auto
+			max-width: 210px
+
+	&__fa
+		margin-left: 10px
+		font-size: 150%
+
+	&--themeColor
+		background-color: $theme-color
+		color: #FFF
+
+	&--themeColor &__fa
+		color: #FFF
+
+	&--scrollTop
+		display: none
+		position: fixed
+		right: 30px
+		bottom: 85px
+		height: 50px
+		width: 50px
+		background-color: rgba(255,255,255,0.4)
+		z-index: 2
+		& i.fa
+			color: #000
+			font-size: 300%
+			position: fixed
+			right: 41px
+			bottom: 92px
+
+@include media-tablet
+	.c-btn
+		&--full
+			width: 320px
+			margin: 0 auto
+
+
+
+.c-button
+	border: 1px #A9A9A9 solid
+	border-radius: 30px
+	padding: 10px 25px
+	font-size: 150%
+	color: #000
+	text-align: center
+	cursor: pointer
+	&--short
+	&--full
+		width: 100%
+	&--theme
+		background-color: $theme-color
+		color: #FFF
+	&--theme:visited
+		color: #FFF
+	&__fa
+		color: $theme-color
+		margin-left: 10px
+		font-size: 150%
+	& i.fa-angle-right
+		padding-bottom: 3.5px
+		font-size: 300%
+	& i.fa-clone
+		@include fa-icon-rotate(270deg, 3)
+		padding-left: 5px
+		padding-bottom: 0
+@include media-tablet
+	.c-button
+		&--short
+		&--full
+			width: 220px
+			margin: 0 auto

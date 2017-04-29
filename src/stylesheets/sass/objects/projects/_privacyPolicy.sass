@@ -1,0 +1,27 @@
+.p-privacyPolicy
+	&__content
+		@include layout-content
+		padding-bottom: 30px
+	&__title
+		@include title-in-homepage
+	&term__signature
+		display: flex
+		justify-content: flex-end
+	&__subtitle
+		text-align: center
+
+	&--bgColor
+		background-color: $background-color
+	&--newPage &__content
+		display: block
+
+@include media-tablet
+	.p-privacyPolicy
+		&__content
+			display: flex
+			align-items: flex-end
+			width: 100%
+		&__title
+			align-self: flex-start
+			margin-right: 80px
+			font-size: 1.5em

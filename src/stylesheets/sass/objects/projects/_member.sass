@@ -1,0 +1,116 @@
+$img-height: 200px
+.p-member
+	margin-top: 30px
+	position: relative
+	height: $img-height * 4
+	overflow: hidden
+	&__layout
+		position: absolute
+		width: 100%
+		height: $img-height * 2
+		left: 0
+		@include flex
+		@include flexWrap
+		// overflow-x: hidden
+		flex-direction: column
+		&--right
+			top: $img-height * 2
+			background-color: #FFF
+			color: #FFF
+		&--left
+			top: 0
+			background-color: $theme-color
+			z-index: 1
+	&__layout--left &__employee 
+			opacity: 0.5
+	
+	&__content
+		height: $img-height * 2 - 8px
+	&__link
+		margin-top: 10px
+		text-align: right
+		pointer-events: auto
+	&__title
+		@include layout-content
+		position: relative
+		z-index: 2
+		padding-top: 60px
+		pointer-events: none
+	&__cover
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		// &--left
+		// 	background: url($img-path + "layer_member_03.png"), url($img-path + "layer_member_04.png")
+		// 	background-repeat: no-repeat
+		// 	background-size: 1000px auto
+		// 	background-position: 25% -5px , -5px ($img-height - 10px)
+		// 	opacity: 0.2
+		// &--right
+		// 	background: url($img-path + "layer_member_01.png"), url($img-path + "layer_member_02.png")
+		// 	background-repeat: no-repeat
+		// 	background-size: 1000px auto
+		// 	height: $img-height * 2
+		// 	background-position: 65% -5px, 15% ($img-height - 10px)
+	&__employee
+		position: relative
+		width: 50%
+		height: 200px
+		padding: 3px 1.5px
+		z-index: 0
+		display: inline-block
+		overflow: hidden
+		// background-color: $theme-color
+		& > img
+			height: auto
+			width: 100%
+
+@include media($mobile-size)
+	.p-member
+		&__employee
+			width: 25%
+
+@include media-tablet
+	.p-member
+		margin-top: 40px
+		display: flex
+		height: $img-height * 2
+		&__layout
+			flex-direction: row
+			height: $img-height * 2 - 2
+			&--left
+				width: 45%
+				@include flexItemsRight
+			&--right
+				width: 55%
+				top: 0
+				left: 45%
+		&__content
+			height: $img-height * 2 - 17px
+			display: inline-block
+			width: auto
+			&--left
+				width: $content-width * 0.45 * 0.9
+				float: right
+				text-align: left
+			&--right
+				padding-left: 5%
+				max-width: $content-width * (1 - (0.45 * 0.9))
+		&__link
+			text-align: left
+			margin-left: 245px
+		&__cover
+			&--left
+				background-position: right -7px , right ($img-height - 10px)
+			&--right
+				background-position: -2px -7px, -2px ($img-height - 10px)
+		&__title
+			width: 100%
+		&__employee
+			width: 140px
+			padding: 0 3px 3px
+			& > img 
+				width: auto
+				height: 100%

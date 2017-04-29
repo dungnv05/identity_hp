@@ -1,0 +1,70 @@
+.p-message
+	background: url($img-path + "layer_grey_sp.png") no-repeat
+	background-size: cover
+	background-position: 0 center
+	overflow: hidden
+	&__content
+		position: relative
+		@include layout-content-recruit
+		padding: 0 10px
+	&__title
+		padding-top: 50px
+		width: 61%
+		font-size: 17px
+		& .c-line
+			border-bottom-color: #000
+	&__message
+		padding-top: 15px
+		width: 55%
+		font-size: 15px
+	&__detail
+		padding-top: 15px
+		padding-bottom: 40px
+		width: 55%
+		font-size: 12px
+	&__image
+		position: absolute
+		bottom: 10px
+		left: 55%
+		width: 60%
+		max-height: 265px
+		& > img 
+			width: 100%
+			height: auto
+@include media(375px)
+	.p-message
+		&__image
+			max-height: 315px
+@include media-tablet
+	.p-message
+		position: relative
+		background: url($img-path + "layer_grey_pc.png") no-repeat
+		background-size: cover
+		background-position: 0 0
+		&__content
+			@include layout-content-recruit-pc
+			padding: 0
+		&__title
+			width: 55%
+			padding-top: 180px
+			text-align: center
+			font-size: 36px
+		&__message
+			padding-top: 35px
+			font-size: 26px
+		&__detail
+			padding-top: 45px
+			padding-bottom: 200px
+			font-size: 14px
+		&__image
+			width: 38%
+			top: 100px
+			right: 0
+			& > img
+				height: 660px
+				width: auto
+@include media($content-width)
+	.p-message
+		&__image
+			& > img
+				height: 560px

@@ -1,0 +1,124 @@
+$slide-height: 260px
+$office-picture-first: $img-path + "office_01.jpg"
+$office-picture-second: $img-path + "office_02.jpg"
+$office-picture-third: $img-path + "office_03.jpg"
+$office-picture-fourth: $img-path + "office_04.jpg"
+$office-picture-fifth: $img-path + "office_05.jpg"
+$office-picture-sixth: $img-path + "office_06.jpg"
+$office-picture-seventh: $img-path + "office_07.jpg"
+$office-picture-eighth: $img-path + "office_08.jpg"
+
+.p-office
+	&__cover
+		background: #F3F3F3
+	&__descBox
+		padding: 50px 0
+	&__title
+		text-align: center
+		font-size: 18px
+		width: 100%
+	&__desc
+		padding-top: 20px 
+		font-size: 12px
+	&__pictureBox
+		position: relative
+		height: 100%
+		width: 100%
+		overflow: hidden
+	&__picture
+		width: 100%
+		height: 260px
+		&--first
+			background: url($office-picture-first) no-repeat center center
+			background-size: cover
+		&--second
+			background: url($office-picture-second) no-repeat center center
+			background-size: cover
+		&--third
+			background: url($office-picture-third) no-repeat center center
+			background-size: cover
+		&--fourth
+			background: url($office-picture-fourth) no-repeat center center
+			background-size: cover
+		&--fifth
+			background: url($office-picture-fifth) no-repeat center center
+			background-size: cover
+		&--sixth
+			background: url($office-picture-sixth) no-repeat center center
+			background-size: cover
+		&--seventh
+			background: url($office-picture-seventh) no-repeat center center
+			background-size: cover
+		&--eighth
+			background: url($office-picture-eighth) no-repeat center center
+			background-size: cover
+	&__btn
+		position: absolute
+		z-index: 1
+		width: 30px
+		height: 30px
+		top: ($slide-height/2) - 15
+		background: $background-color
+		cursor: pointer
+		& > .fa
+			font-size: 24px
+			margin-bottom: 5px
+			color: $in-cover-color
+		&--prev
+			left: 0px
+			& > .fa
+				margin-left: -5px
+		&--next
+			right: 0
+			& > .fa
+				margin-right: -5px
+
+$slide-height: 520px
+@include media-tablet
+	.p-office
+		height: $slide-height
+		&__cover
+		&__content
+			height: 100%
+		&__descBox
+			padding: 0 40px 15px
+			@include flex
+			flex-direction: column
+			@include flexItemsMiddle
+			@include flexItemsCenter
+			height: 100%
+		&__title
+			text-align: center
+			font-size: 36px
+			width: 100%
+		&__desc
+			padding-top: 40px 
+			font-size: 14px
+		&__pictureBox
+			position: absolute
+			top: 0
+			left: 49.9%
+			height: 100%
+			width: 50.1%
+			z-index: 1
+		&__picture
+			position: relative
+			width: 100%
+			height: 520px
+			overflow: hidden
+			& > img
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				width: auto
+				height: auto
+				margin: auto
+		&__btn
+			width: 50px
+			height: 50px
+			top: ($slide-height/2) - 25
+			background: $background-color
+			&--prev
+			&--next

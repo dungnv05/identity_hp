@@ -1,0 +1,120 @@
+.c-input
+	background-color: #FFF
+	width: 100%
+	border: 1px solid $border-color
+	font-size: 100%
+	border-radius: 20px
+	overflow: hidden
+	white-space: nowrap
+	padding: $input-padding ($font-size * 1.5)
+	box-sizing: border-box
+	-moz-appearance: none
+	-webkit-appearance: none
+	appearance: none
+	&__required
+		color: $theme-color
+		margin: 0 5px
+	&__desc
+		font-size: 86%
+		font-weight: 300
+	&__select
+		padding: $input-padding ($font-size * 1.5)
+		padding-right: 35px
+		line-height: 1.2
+		&Box
+			position: relative
+		&Mark
+			position: absolute
+			top: ($font-size / 2) - (8px - $input-padding)
+			right: $font-size
+			font-size: 140%
+			color: $border-color
+			pointer-events: none
+			&--coverColor
+				color: $cover-color
+	&__label
+		display: inline-block
+	&Checkbox
+		display: inline
+		padding-left: 5px
+	&__checkbox
+		position: relative
+	&__checkboxMark
+		position: absolute
+		left: 0
+		top: 0px
+		width: 18px
+		height: 18px
+		border: 1px solid $border-color
+		background-color: #FFF
+	&__checkboxTick
+		position: absolute
+		left: 0
+		top: 0px
+		width: 18px
+		height: 18px
+		border: 1px solid $theme-color
+		z-index: 1
+		& .fa
+			color: $theme-color
+			font-size: 16px
+	&Radio
+		position: relative
+		display: inline-block
+		height: 100%
+		&__circleBox
+			position: absolute
+			left: 0
+			top: 5px
+			width: 18px
+			height: 18px
+			border: 1px solid $border-color
+			border-radius: 50%
+			background-color: #FFF
+			display: inline-block
+			@include flex
+			@include flexItemsMiddle
+			@include flexItemsCenter
+		&__circle
+			color: $theme-color
+			background-color: $theme-color
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			z-index: 1
+			pointer-events: none
+
+		&__label
+			padding-left: 25px
+		& validetta-bubble
+			top: 32px
+	&__group
+		&Mark
+			display: inline-block
+			width: 10%
+			font-size: 18px
+			font-weight: 500
+			vertical-align: middle
+			text-align: center
+		&Input
+			display: inline-block
+			width: 90%
+	&--textarea
+		background-color: #FFF
+		border-radius: 15px
+		resize: none
+		overflow-y: auto
+		overflow-x: hidden
+		white-space: pre-wrap
+
+@include media($tablet-size)
+	.c-input
+		&__desc
+			display: block
+		&__checkbox
+			&Mark
+			&Tick
+		&Radio
+			&__circleBox
+				top: 2px
+			&__circle

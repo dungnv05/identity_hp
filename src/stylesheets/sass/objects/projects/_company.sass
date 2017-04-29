@@ -1,0 +1,72 @@
+.p-company
+	background-color: #FFF
+	position: relative
+	padding-bottom: 50px
+	&__content
+		@include layout-content
+	&__title
+		@include title-in-homepage
+		padding-bottom: 15px
+	&__table tbody
+		display: block
+		width: 100%
+	&__table tr
+		width: 100%
+		display: block
+	&__table
+		width: 100%
+		display: block
+		font-size: 120%
+		&Title
+			display: block
+			width: 100%
+			padding-top: 20px
+			font-weight: 700
+			text-align: left
+		&Content
+			display: block
+			width: 100%
+			& a.c-name
+				border: none
+				color: $theme-color
+	&__map
+		margin-top: 35px
+		width: 100%
+		height: 190px
+	&__link:last-of-type
+		margin-bottom: 0
+	&__link
+		margin-top: 10px
+		margin-bottom: 20px
+		text-align: right
+	&__triagle
+		border-top: 21px solid #fff
+		margin-top: 50px
+
+@include media-tablet
+	.p-company
+		&__content
+			width: 100%
+		&__title
+			padding-bottom: 60px
+		&__table tbody
+			display: table-row-group
+		&__table tr
+			display: table-row
+		&__table td
+			display: table-cell
+
+		&__table
+			display: inline-table
+			width: 49%
+			font-size: 100%
+			&Title
+				width: 33%
+			&Content
+				width: 67%
+				padding-right: 30px
+		&__map
+			margin-top: 55px
+			height: 375px
+		&__triagle
+			border-top: 16px solid #fff

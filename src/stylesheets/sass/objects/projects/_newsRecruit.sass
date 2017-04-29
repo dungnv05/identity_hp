@@ -1,0 +1,61 @@
+.p-news
+	background-color: $background-color-light
+	position: relative
+	margin-bottom: 0px
+	&__content
+		@include layout-content-recruit
+		padding-bottom: 30px
+	&__title
+		padding-top: 15px
+		font-size: 15px
+		color: $in-cover-color
+		text-align: center
+	&__item
+		position: relative
+		padding: 15px 30px 15px 0
+		border-bottom: 1px solid $in-cover-color
+		font-size: 12px
+		color: $in-cover-color
+		&Date
+			font-weight: 600
+			min-width: 120px
+			white-space: nowrap
+		&Title
+			cursor: pointer
+			font-weight: 600
+			width: 100%
+		&Desc
+			padding-top: 20px
+			a
+				color: #fff
+		&Btn.fa
+			color: $in-cover-color
+			position: absolute
+			top: 45%
+			right: 10px
+			cursor: pointer
+	&__itemHead
+		@include flex
+		a
+			color: $in-cover-color
+@include media-tablet
+	.p-news
+		&__content
+			@include layout-content-recruit-pc
+			padding: 0 0 40px
+		&__title
+			font-size: 30px
+			padding: 35px 0 0
+		&__list
+			margin-top: 87px
+		&__item
+			font-size: $font-size
+			&Date
+				display: inline-block
+			&Title
+				display: inline-block
+			&Desc
+		&__moredetail
+			margin-right: 30px
+			display: flex
+			justify-content: flex-end

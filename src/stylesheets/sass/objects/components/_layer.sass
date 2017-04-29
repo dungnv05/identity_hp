@@ -1,0 +1,19 @@
+.c-layer
+	opacity: $opacity
+	&--underLayer
+		background-color: $background-color
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: $head-index - 2
+	&--top
+		top: 0
+		left: 0
+		position: absolute
+		width: 100%
+
+@include media($tablet-size)
+	.c-layer
+		&--top

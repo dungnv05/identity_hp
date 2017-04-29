@@ -1,0 +1,39 @@
+{
+  "name": "identity_hp",
+  "version": "1.0.0",
+  "description": "Identity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "./src/build-css",
+    "watch-sass": "./src/watch-css",
+    "build-script": "./src/build-script",
+    "watch-script": "./src/watch-script",
+    "watch-recruit": "watchify src/javascripts/script_recruit.js -o public/javascripts/script_recruit.js -v",
+    "watch-fresh": "watchify src/javascripts/fresh_script.js -o public/javascripts/fresh_script.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://identity_n_dung@bitbucket.org/identity_front/identity_homepage.git"
+  },
+  "keywords": [
+    "identity"
+  ],
+  "author": "ゆん",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/identity_front/identity_homepage#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "icheck": "^1.0.2",
+    "jquery": "^3.1.1",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "slick-carousel": "^1.6.0",
+    "uglifyjs": "^2.4.10",
+    "underscore": "^1.8.3",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}

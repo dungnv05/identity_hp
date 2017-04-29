@@ -1,0 +1,158 @@
+$modal-theme-color: #0c5bac
+.c-modal
+	position: fixed
+	left: 0
+	padding: 0 10px
+	width: 100%
+	box-sizing: border-box
+	z-index: $head-index - 1
+	&__head
+		position: relative
+		max-width: 400px
+		margin: 0 auto
+		z-index: $head-index
+	&__body
+		overflow-y: scroll
+		max-width: 400px
+		margin: 0 auto
+		z-index: $head-index
+		position: relative
+		background: #FFF
+		padding: 25px 15px
+		font-size: 12px
+		&::-webkit-scrollbar
+		    -webkit-appearance: none
+		&::-webkit-scrollbar:vertical
+		    width: 11px
+		&::-webkit-scrollbar:horizontal
+		    height: 11px
+		&::-webkit-scrollbar-thumb
+		    border-radius: 8px
+		    border: 2px solid white
+		    background-color: rgba(0, 0, 0, .5)
+		&::-webkit-scrollbar-track
+		    background-color: #fff
+		    border-radius: 8px
+	&__info
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		padding: 45px 0 20px 55%
+		font-size: 9px
+		@include flex
+		flex-direction: column
+		@include flexItemsTop
+		@include flexItemsRight
+
+		&--left
+			padding: 45px 50% 20px 5%
+	&__picture
+		position: relative
+		height: 180px
+		width: 100%
+		overflow: hidden
+		& > img
+			position: absolute
+			height: 100%
+			width: auto
+			left: -15%
+		&--right
+			& > img
+				left: auto
+				right: -15%
+
+	&__occupation
+		display: inline-block
+		background: $modal-theme-color
+		padding: 4px 8px
+		color: $in-cover-color
+	&__name
+		margin-top: 10px
+		font-size: 20px
+	&__year
+	&__btn
+		position: absolute
+		top: 0
+		right: 0
+		width: 30px
+		height: 30px
+		z-index: 1
+		@include flex
+		@include flexItemsMiddle
+		@include flexItemsCenter
+		background: $background-color
+		& > .fa-close
+			position: absolute
+			top: 5px
+			right: 6.5px
+			font-size: 20px
+	&__title
+		color: $modal-theme-color
+		&--left
+	&__content
+		padding: 25px 0
+		&--left
+		& a
+			color: $theme-color
+	&__descImg
+		float: right
+		& > img
+			width: 100%
+			height: auto
+@include media($iphone6-size)
+	.c-modal
+		&__picture
+			& > img
+				left: -5%
+			&--right
+				& > img
+					left: auto
+					right: -5%
+@include media-tablet
+	.c-modal
+		&__head
+			@include layout-content-recruit-pc
+		&__body
+			@include layout-content-recruit-pc
+			padding: 45px
+		&__btn
+			box-shadow: none
+		&__picture
+			height: 300px
+			& > img
+				width: 100%
+				height: auto
+				right: 0
+				left: 0
+				top: 0
+		&__occupation
+			padding: 8px 20px
+		&__name
+			font-size: 60px
+			&--long
+				font-size: 47px
+		&__info
+			bottom: 0
+			right: 0
+			top: 30px
+			left: auto
+			height: auto
+			padding: 0 0 10px 0
+			font-size: 14px
+			width: 50%
+			&--left
+				left: 0
+				right: auto
+				padding: 0 0 10px 5%
+				width: 55%
+		&__title
+			font-size: 18px
+		&__layout
+			@include flex
+			@include flexItemsBetween
+			&Item
+				@include flexItem--6
+				&--descImg
+					padding-left: 45px

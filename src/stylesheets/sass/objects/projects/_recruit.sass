@@ -1,0 +1,62 @@
+.p-recruit
+	margin-top: 50px
+	position: relative
+	height: 320px * 2
+	&__layout
+		position: absolute
+		width: 100%
+		height: 325px
+		left: 0
+		&--left
+			top: 0
+			background: url($img-path + "layer_recruit.jpg") no-repeat
+			background-size: cover
+			background-position: 0 0
+			padding: 30px 0
+		&--right
+			top: 320px
+			background-color: $theme-color
+			color: #FFF
+			padding: 30px 0
+	&__content
+		@include layout-content
+		position: relative
+		z-index: 1
+		height: 320px
+		&--left
+			padding-top: 90px
+		&--right
+			padding-top: 15%
+			color: #FFF
+
+	&__link
+		margin-top: 20px
+		text-align: right
+@include media-tablet
+	.p-recruit
+		height: 400px
+		display: flex
+		&__layout
+			padding-top: 60px
+			height: 400px
+			&--left
+				background-size: fill
+				width: 55%
+			&--right
+				width: 45%
+				top: 0
+				left: 55%
+			&Content
+				@include layout-content
+				width: 100%
+				@include flex
+				@include flexItemsMiddle
+				@include flexItemsBetween
+		&__content
+			padding-top: 100px
+			height: 400px
+			&--left
+				width: 55%
+			&--right
+				width: 45%
+				padding-left: 60px

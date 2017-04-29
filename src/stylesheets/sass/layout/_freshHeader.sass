@@ -1,0 +1,197 @@
+$header-height: 50px
+
+.l-header--pc
+	display: none
+.l-header--sp
+	background-color: $background-color
+	border-bottom: 1px solid $border-color
+	margin-bottom: 60px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: $head-index
+	&__bar
+		height: $header-height
+		@include flex
+		@include flexNoWrap
+		@include flexItemsMiddle
+		@include flexItemsBetween
+		background-color: #FFF
+		width: 100%
+	&__logo
+		padding: 6px 10px 0
+		display: inline-block
+		& img
+			height: 28px
+			width: auto
+	&__menu
+		&button
+			margin: 8px
+			width: 42px
+			height: 28px
+			position: relative
+			display: inline-block
+			float: right
+			border: 1px solid #A9A9A9
+			border-radius: 20px
+			text-align: center
+			background-color: #FFF
+			cursor: pointer
+			& .fa
+				margin: 2px
+				justify-content: center
+				align-items: center
+				font-size: 110%
+			& .fa-times
+				margin: -1px
+				justify-content: center
+				align-items: center
+				font-size: 110%
+		&List
+			display: none
+			position: absolute
+			top: $header-height
+			width: 100%
+			height: auto
+			text-align: center
+			padding-top: 15px
+			background-color: $background-color
+			border-bottom: 1px solid $border-color
+			z-index: $head-index + 1
+			& li:last-child
+				padding-bottom: 10px
+			& .fa-angle-right
+				color: $theme-color
+				padding-right: 20px
+				font-size: 200%
+				position: absolute
+				top: 10px
+				right: 50px
+		&Item
+			position: relative
+			display: block
+			padding: 15px 0
+			color: #000
+			font-weight: 700
+
+#service, #message, #session, #oneday, #infographics, #requirements, #entry
+	position: relative
+	top: -30px
+	display: block
+#company
+	position: relative
+	top: -30px
+	display: block
+#contact
+	position: relative
+	top: -30px
+	display: block
+#member
+	position: relative
+	top: -30px
+	display: block
+#recruit
+	position: relative
+	top: -30px
+	display: block
+#news
+	position: relative
+	top: -30px
+	display: block
+
+$header-height: 70px
+@media(min-width: $tablet-size)
+	.l-header--sp
+		display: none
+	.l-header--pc
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		display: block
+		margin-bottom: $header-height
+		height: $header-height
+		z-index: $head-index
+		background-color: #FFF
+		border-bottom: 1px solid $border-color
+		&__container
+			margin: 0 auto
+			max-width: $content-width
+			height: $header-height
+			color: tomato
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #tomato
+		&__logo
+			padding-top: 5px
+			& img
+				height: 40px
+				width: auto
+		&__menu
+			&List
+				margin-right: 0
+				width: 80%
+				max-width: 720px
+				display: flex
+				height: 100%
+				justify-content: space-between
+				align-items: center
+				& li
+					height: 100%
+					align-items: center
+					display: flex
+					flex-grow: 2
+			&Item
+				padding-bottom: 5px
+				color: #000
+				display: block
+				font-weight: 700
+				width: 100%
+				text-align: center
+				&.active
+					color: $theme-color
+					border-bottom: solid 3px $theme-color
+				&--last
+					margin-right: 0
+					display: block
+					background-color: $theme-color
+					color: #fff
+					height: 100%
+					line-height: 67px
+					&:visited, &:link
+						color:#fff
+
+
+				&__triangle.active
+					width: 0
+					margin: auto
+					height: 0
+					border-style: solid
+					border-width: 5px 5px 0px 5px
+					border-color: $theme-color transparent transparent transparent
+	#message, #session, #oneday, #infographics, #requirements, #entry
+		position: relative
+		top: -60px
+		display: block
+	#company
+		position: relative
+		top: -65px
+		display: block
+	#contact
+		position: relative
+		top: -65px
+		display: block
+	#member
+		position: relative
+		top: -65px
+		display: block
+	#recruit
+		position: relative
+		top: -65px
+		display: block
+	#news
+		position: relative
+		top: -65px
+		display: block

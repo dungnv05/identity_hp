@@ -1,0 +1,187 @@
+.p-character
+	width: 100%
+	background: linear-gradient(160deg, transparent 13%, #FFF 13%, #FFF 88%, transparent 88%), url($img-path + "layer_red_sp.png")
+	padding-top: 50px
+	padding-bottom: 50px
+	&__content
+		@include layout-content-recruit
+	&__title
+		text-align: center
+		font-size: 18px
+	&__charList
+		height: 330px
+		padding-top: 30px
+		@include flex
+		@include flexWrap
+		flex-direction: column
+	&__char
+		background: $background-color-light
+		color: $in-cover-color
+		width: 50%
+		height: 75px
+		@include flex
+		@include flexItemsMiddle
+		@include flexItemsAround
+		border: 1.5px solid #FFF
+		&--grow
+			padding-top: 25px
+			padding-bottom: 20px
+			flex-direction: column
+			height: 150px
+		&--weird
+			padding-top: 10px
+			// @include flexItemsMiddle
+		&--averageAge
+		&--foreign
+		&--venture
+		&--powder
+		&--ai
+	&__image
+		width: auto
+		height: 50%
+		display: inline-block
+		padding-right: 5px
+		& > img
+			width: auto
+			height: 100%
+			margin-bottom: -2.5px
+			margin-right: -5px
+		&--grow
+		&--percent
+			width: auto
+			height: 40%
+			vertical-align: bottom
+		&--sexNumber
+			min-width: 90px
+			position: relative
+			height: 65%
+			width: auto
+			padding-left: 10px
+			vertical-align: middle
+		&--age
+			position: relative
+			height: 65%
+			width: auto
+			vertical-align: middle
+		&--foreign
+			margin-left: -10px
+	&__desc
+		font-family: "Noto Sans CJK JP", "Noto Sans", $font-family
+		font-size: 9px
+		text-align: center
+		letter-spacing: 0
+		color: $in-cover-color
+		&Box
+			height: 100%
+			margin-bottom: 14px
+		&--onIcon
+			display: block
+			padding-top: 10px
+			padding-bottom: 5px
+		&--right
+			margin-left: -20px
+		&Image
+			vertical-align: text-bottom
+			font-size: 9px
+		&--huge
+			font-size: 49px
+			font-weight: 600
+			letter-spacing: -1px
+		&--center
+			margin: 5px
+			font-size: 9px
+		&Note
+			position: absolute
+			font-size: 5px
+			display: block
+			left: -4px
+			right: -2px
+			& > span
+				font-size: 86%
+@include media-tablet
+	.p-character
+		background: linear-gradient(155deg, transparent 15%, #FFF 15%, #FFF 90%, transparent 90%), url($img-path + "layer_red_pc.png")
+		padding-top: 100px
+		padding-bottom: 60px
+		&__content
+			@include layout-content-recruit-pc
+		&__title
+			font-size: 36px
+		&__charList
+			height: 1070px
+			padding-top: 50px
+		&__char
+			height: 250px
+			@include flex
+			@include flexItemsMiddle
+			@include flexItemsAround
+			border: 3px solid #FFF
+			&--grow
+				padding-top: 50px
+				padding-bottom: 40px
+				flex-direction: column
+				height: 500px
+			&--weird
+				padding-top: 10px
+				// @include flexItemsMiddle
+			&--averageAge
+			&--foreign
+			&--venture
+			&--powder
+			&--ai
+		&__image
+			width: auto
+			height: 90px
+			display: inline-block
+			padding-right: 5px
+			& > img
+				width: auto
+				height: 100%
+				margin-bottom: -4px
+				margin-right: -5px
+			&--grow
+			&--percent
+				width: auto
+				height: 120px
+				vertical-align: bottom
+			&--sexNumber
+				min-width: 250px
+				position: relative
+				height: 120px
+				width: auto
+				margin-left: 15px
+				vertical-align: middle
+			&--age
+				position: relative
+				height: 120px
+				width: auto
+				vertical-align: middle
+			&--foreign
+				margin-left: -20px
+		&__desc
+			font-family: "Noto Sans CJK JP", "Noto Sans", $font-family
+			font-size: 23px
+			letter-spacing: 0
+			&Box
+				height: auto
+				padding-left: 10px
+				margin-bottom: 14px
+			&--pullLeft
+				margin-left: -25px
+			&--onIcon
+				padding-top: 10px
+				padding-bottom: 5px
+			&--right
+				margin-left: -20px
+			&Image
+				vertical-align: text-bottom
+				font-size: 24px
+			&--huge
+				font-size: 49px
+				font-weight: 600
+				letter-spacing: -1px
+			&--center
+				font-size: 30px
+			&Note
+				padding-top: 10px
+				font-size: 14px

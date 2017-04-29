@@ -1,0 +1,3 @@
+node-sass --include-path sass src/stylesheets/sass/style.sass style.css --output-style compressed
+node-sass --include-path sass src/stylesheets/sass/style_recruit.sass public/stylesheets/style_recruit.css --output-style compressed
+node-sass --include-path sass src/stylesheets/sass/style_fresh.sass public/stylesheets/style_fresh.css --output-style compressed

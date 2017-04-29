@@ -1,0 +1,152 @@
+$slide-height: 560px
+$jumbotron-picture-first: $img-path + "slide_01.jpg"
+$jumbotron-picture-second: $img-path + "slide_02.jpg"
+$jumbotron-picture-third: $img-path + "slide_03.jpg"
+$jumbotron-picture-fourth: $img-path + "slide_04.jpg"
+$jumbotron-picture-fifth: $img-path + "office_05.png"
+$jumbotron-picture-sixth: $img-path + "office_06.png"
+$jumbotron-picture-seventh: $img-path + "office_07.png"
+$jumbotron-picture-eighth: $img-path + "office_08.png"
+$jumbotron-picture-sp-first: $img-path + "slide_sp01.jpg"
+$jumbotron-picture-sp-second: $img-path + "slide_sp02.jpg"
+$jumbotron-picture-sp-third: $img-path + "slide_sp03.jpg"
+$jumbotron-picture-sp-fourth: $img-path + "slide_sp04.jpg"
+$header-height: 70px
+
+.p-jumbotron
+	position: relative
+	top: $header-height
+	margin-bottom: $header-height
+	z-index: $head-index - 1
+	height: $slide-height
+	&__pictrueSlider
+	&__picture
+		width: 100%
+		height: $slide-height
+		& img
+			opacity: 0
+		&--first
+			background: url($jumbotron-picture-first) no-repeat center center
+			background-size: cover
+			background-position: center center
+		&--second
+			background: url($jumbotron-picture-second) no-repeat center center
+			background-size: cover
+		&--third
+			background: url($jumbotron-picture-third) no-repeat center center
+			background-size: cover
+		&--fourth
+			background: url($jumbotron-picture-fourth) no-repeat center center
+			background-size: cover
+			background-position: center 0
+		&--fifth
+			background: url($jumbotron-picture-fifth) no-repeat center center
+			background-size: cover
+			background-position: 0 0
+		&--sixth
+			background: url($jumbotron-picture-sixth) no-repeat center center
+			background-size: cover
+			background-position: 0 0
+		&--seventh
+			background: url($jumbotron-picture-seventh) no-repeat center center
+			background-size: cover
+			background-position: 0 0
+		&--eighth
+			background: url($jumbotron-picture-eighth) no-repeat center center
+			background-size: cover
+			background-position: 0 0
+	&__desc
+	&__btn
+		position: absolute
+		z-index: 1
+		width: 30px
+		top: 20px
+		cursor: pointer
+		& > .fa
+			font-size: 50px
+			margin-bottom: 5px
+			color: $in-cover-color
+		&--prev
+			left: -100px
+			& > .fa
+		&--next
+			right: -100px
+			& > .fa
+	&__messageBox
+		position: absolute
+		z-index: 1
+		width: 100%
+		height: 100px
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		letter-spacing: 0
+		@include flex
+		@include flexItemsMiddle
+		@include flexItemsCenter
+	&__message
+		position: relative
+		background: rgba(255,255,255,0.8)
+		padding: 10px 0px 10px 25px
+		color: $theme-color
+		font-size: 50px
+$slide-height: 450px
+@media (max-width: $pc-size)
+	.p-jumbotron
+		height: $slide-height
+		&__pictrueSlider
+		&__picture
+			width: 100%
+			height: $slide-height
+		&__messageBox
+			height: 60px
+		&__btn
+			top: 15px
+		&__message
+			font-size: 40px
+@media (max-width: $tablet-size)
+	.p-jumbotron
+		height: auto
+		top: 50px
+		margin-bottom: 60px
+		&__pictrueSlider
+		&__picture
+			height: auto
+			& img
+				width: 100%
+				height: auto
+				opacity: 0
+			&--first
+				background: url($jumbotron-picture-sp-first) no-repeat center center
+				background-size: contain
+				background-position: center center
+			&--second
+				background: url($jumbotron-picture-sp-second) no-repeat center center
+				background-size: contain
+				background-position: center center
+			&--third
+				background: url($jumbotron-picture-sp-third) no-repeat center center
+				background-size: contain
+				background-position: center center
+			&--fourth
+				background: url($jumbotron-picture-sp-fourth) no-repeat center center
+				background-size: contain
+				background-position: center center
+		&__messageBox
+			height: 40px
+		&__message
+			font-size: 30px
+$slide-height: 300px
+@media (max-width: $mobile-size)
+	.p-jumbotron
+		height: auto
+		&__pictrueSlider
+		&__picture
+			width: 100%
+			height: auto
+		&__messageBox
+			height: 40px
+		&__message
+			font-size: 20px

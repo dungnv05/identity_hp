@@ -1,0 +1,86 @@
+.p-contact
+	background-color: $background-color
+	position: relative
+	padding-bottom: 50px
+	&__content
+		@include layout-content
+	&__table tbody
+		display: block
+		width: 100%
+	&__table tr
+		width: 100%
+		display: block
+	&__table
+		width: 100%
+		display: block
+		font-size: 120%
+		&Title
+			display: block
+			width: 100%
+			padding-top: 20px
+			padding-bottom: 8px
+			font-weight: 700
+			text-align: left
+		&Content
+			display: block
+			width: 100%
+	&__title
+		@include title-in-homepage
+		padding-bottom: 15px
+	&__caution
+		padding-bottom: 10px
+	&__input
+		height: 30px
+		line-height: 1.2
+		margin: auto 0
+	& .c-input--textarea
+		height: auto
+		line-height: 1.2
+		margin-top: -3px
+	&__term
+		margin-top: 20px
+	&__agreeBox
+		text-align: center
+	&__agree
+		display: inline-block
+		margin-top: 20px
+	&__linkList
+		text-align: center
+		& > .c-link
+			margin-top: 20px
+		& > .c-btn
+			margin-top: 20px
+			margin-bottom: 40px
+	&__triagle
+		border-top: 21px solid $background-color
+		margin-top: 50px
+
+@include media-tablet
+	.p-contact
+		&__content
+			width: 100%
+		&__title
+		&__caution
+			padding-bottom: 40px
+		&__table tbody
+			display: table-row-group
+		&__table tr
+			display: table-row
+		&__table td
+			display: table-cell
+
+		&__table
+			display: inline-table
+			width: 49%
+			font-size: 100%
+			&Title
+				width: 36%
+				padding-bottom: 0
+			&Content
+				width: 64%
+				padding-right: 20px
+				padding-bottom: 4px
+		&__input
+			line-height: 1
+		&__triagle
+			border-top: 16px solid $background-color

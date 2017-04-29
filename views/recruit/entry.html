@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IT（エンジニア、クリエイター）人材総合支援会社　株式会社アイデンティティー</title>
+	<meta charset="utf-8">
+	<meta name="description" content="株式会社アイデンティティーはIT人材（エンジニア、クリエイター）に特化した求人広告媒体（brainier：ブレイナー）とエージェントサービスで企業のITエンジニア不足を解決します。">
+	<meta name="keyword" content="アイデンティティー、IT人材総合支援会社、IT人材、ITエンジニア、エージェント、IT求人、braineer、コネクリ、派遣、中途、オンサイト">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/dung/public/stylesheets/validetta.css">
+	<link rel="stylesheet" type="text/css" href="/dung/public/stylesheets/style_recruit.css">
+</head>
+<body>
+	<!-- スマホヘッダー -->
+	<header class="l-header l-header--underLayer">
+		<div class="l-header--sp l-header--recruit">
+			<div class="l-header--sp__bar l-header--sp__bar--underLayer">
+				<a href="/dung/views">
+					<h1 class="l-header--sp__logo">
+						<img src="/dung/public/images/identity.png" alt="株式会社アイデンティティー">
+					</h1>
+				</a>
+				<button class="l-header--sp__menubutton">
+					<i class="fa fa-bars"></i>
+				</button>
+			</div>
+			<ul class="l-header--sp__menuList">
+				<li><a class="l-header--sp__menuItem" href="#message">Top Message</a></li>
+				<li><a class="l-header--sp__menuItem" href="#interview">Interview</a></li>
+				<li><a class="l-header--sp__menuItem" href="#about">This is identity</a></li>
+				<li><a class="l-header--sp__menuItem" href="#office">Office</a></li>
+				<li><a class="l-header--sp__menuItem" href="#recruitment">Recruitment</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- PCヘッダー -->
+	<header class="l-header l-header--underLayer">
+		<div class="l-header--pc l-header--recruit">
+			<div class="l-header--pc__container">
+				<a href="/dung/views">
+					<h1 class="l-header--pc__logo"><img src="/dung/public/images/identity.png" alt="株式会社アイデンティティー"></h1>
+				</a>
+				<ul class="l-header--pc__menuList">
+					<li><a class="l-header--pc__menuItem" href="#message">Top Message</a></li>
+					<li><a class="l-header--pc__menuItem" href="#interview">Interview</a></li>
+					<li><a class="l-header--pc__menuItem l-header--pc__menuItem--long" href="#about">This is identity</a></li>
+					<li><a class="l-header--pc__menuItem" href="#office">Office</a></li>
+					<li><a class="l-header--pc__menuItem" href="#recruitment">Recruitment</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="c-layer c-layer--top"></div>
+<div class="p-requirement__top">
+	<img src="/dung/public/images/layer_recruit.jpg" class="p-requirement__topimage--sp">
+	<h2 class="p-requirement__topTitle"><span class="p-requirement--large">ー</span>募集フォーム<span class="p-requirement--large">ー</span></h2>
+</div>
+	<form id="form" class="p-requirement__content" action="/dung/controllers/recruitForm.php" method="post">
+		<div class="p-requirement__basicInfo__wrapper p-requirement__basicInfo__wrapper--noPadding">
+			<div class="p-requirement__basicInfo__desc">応募は下記のフォームよりお願い致します。フォーム中の「<span class="c-input__required">※</span>」印は入力必須項目です。
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">職種<span class="c-input__required">※</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<div class="c-input__selectBox">
+	          <i class="fa fa-caret-down c-input__selectMark c-input__selectMark--coverColor" aria-hidden="true"></i>
+	          <select id="select_1" name="typeContact" class="c-input c-input--select" data-validetta="required">
+	            <option value="">選んでください</option>
+	            <option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+	          </select>
+	        </div>
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">氏名<span class="c-input__required">※</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="kanjiName" size="30" class="p-contact__input c-input" data-validetta="required">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">フリガナ<span class="c-input__required">※</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="kanaName" size="30" class="p-contact__input c-input" data-validetta="required">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">年齢<span class="c-input__required">※</span><span class="c-input__desc">半角数字</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="age" size="30" class="p-contact__input c-input" data-validetta="required,number">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">メールアドレス<span class="c-input__required">※</span><span class="c-input__desc">半角英数</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="emailAddress" size="30" class="p-contact__input c-input" data-validetta="required,email">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">メールアドレス確認<span class="c-input__required">※</span><span class="c-input__desc">半角英数</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="confirmEmailAddress" size="30" class="p-contact__input c-input" data-validetta="required,email,equalTo[emailAddress]">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">電話番号<span class="c-input__required">※</span><span class="c-input__desc">半角</span></div>
+				<div class="p-requirement__basicInfo__detail">
+					<input type="text" name="phoneNumber" class="p-contact__input c-input" data-validetta="required,tel" placeholder="例）03-5459-0488">
+				</div>
+			</div>
+			<div class="p-requirement__basicInfo__box">
+				<div class="p-requirement__basicInfo__subtitle">住所</div>
+				<div class="p-requirement__basicInfo__detail">
+					<div class="p-requirement__groupInput c-input__wrapper">
+						<label class="c-input__label">郵便番号 <span class="c-input__desc">半角数字</span></label>
+						<div class="c-input__group">
+							<i class="c-input__groupMark">〒</i><input type="text" name="phoneNumber" class="p-contact__input c-input c-input__groupInput">
+						</div>
+					</div>
+					<div class="p-requirement__groupInput c-input__wrapper">
+						<label class="c-input__label">都道府県</label>
+						<div class="c-input__group">
+							<input type="text" name="phoneNumber" class="p-contact__input c-input">
+						</div>
+					</div>
+					<div class="p-requirement__groupInput c-input__wrapper">
+						<label class="c-input__label">市区町村</label>
+						<div class="c-input__group">
+							<input type="text" name="phoneNumber" class="p-contact__input c-input">
+						</div>
+					</div>
+					<div class="p-requirement__groupInput c-input__wrapper">
+						<label class="c-input__label">番地以下</label>
+						<div class="c-input__group">
+							<input type="text" name="phoneNumber" class="p-contact__input c-input">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-requirement__term p-term">
+	    <h3 class="p-term__title">採用応募者の個人情報の取扱いについて</h3>
+	    <br/>
+	    a)  個人情報の取扱事業者の名称<br/>
+	    株式会社アイデンティティー<br/>
+	    <br/>
+	    b)  個人情報の保護管理者<br/>
+	    個人情報保護管理責任者　　星野　友紀子<br/>
+	    <br/>
+	    c)  個人情報の利用目的<br/>
+	    入力された個人情報は、お問合せへの対応のために利用します。<br/>
+	    <br/>
+	    d)  個人情報の第三者提供<br/>
+	    法令の要請に基づく場合を除き、取得した個人情報をご本人の同意なく、第三者に提供する
+	    ことはありません。<br/>
+	    <br/>
+	    e)  個人情報の取扱いの委託<br/>
+	    取得した個人情報の全部又は一部について外部に取扱いの委託を行なうことはありません。<br/>
+	    <br/>
+	    f)  開示対象個人情報の開示等の求めに応じる問合わせ窓口<br/>
+	    ご本人からの求めにより、当社が取得した開示対象個人情報の利用目的の通知、開示、
+	    内容の訂正、追加又は削除、利用の停止、消去及び第三者への提供の停止（「開示等」という）
+	    に応じます。<br/>
+	    開示等の求めに応じる窓口は、以下の「お問合せ先」をご覧ください。<br/>
+	    <br/>
+	    g)  個人情報の入力項目について<br/>
+	    個人情報の各入力項目への入力は、任意となっておりますが、主要な項目（※印項目）
+	    に入力がない場合は、お問合わせの内容によっては、対応できない場合があります。<br/>
+	    <br/>
+	    h)  本人が容易に認識できない方法による個人情報の取得<br/>
+	    クッキーやウェブビーコン等を用いるなどして、本人が容易に認識できない方法による
+	    個人情報の取得は、行なっておりません。<br/>
+	    <br/>
+	    x)  個人情報の安全管理措置<br/>
+	    このサイトは、SSL（Secure Socket Layer)暗号化措置により、個人情報への不正アクセス、
+	    その盗用などから保護しております。<br/>
+	    取得した個人情報は、漏洩、滅失又は毀損の防止と是正、その他個人情報の安全管理
+	    のために、必要かつ適切な措置を講じています。<br/>
+	    取得した個人情報は、お問合せに対して回答後、当社において確実に削除します。<br/>
+	    <br/>
+	    お問合せ先<br/>
+	    個人情報問い合せ窓口：03-5459-0488<br/>
+	    E-MAIL:web-sales@id-entity.jp<br/>
+	  </div>
+	  <div class="p-requirement__agree">
+		  <div class="p-agree c-input__checkbox">
+	      <label class="c-input__checkboxMark" for="iCheck"></label>
+	      <label class="c-input__checkboxTick s-hidden" for="iCheck"><i class="fa fa-check"></i></label>
+	      <input type="checkbox" name="iCheck" id="iCheck" data-validetta="required">
+	      <label for="iCheck" class="c-inputCheckbox">上記の【個人情報の取扱いについて】に同意する</label>
+	    </div>
+	  </div>
+		<div class="p-requirement__btnList">
+	    <button type="submit" class="p-requirement__btn--long c-btn c-btn--colorReverse" href="http://localhost:8888/wordpress/recruit/fresh" target="_blank">入力内容を確認する
+	        <i class="c-btn__fa fa fa-angle-right"></i>
+	    </button>
+    </div>
+	</form>
+	<!-- フッター -->
+	<footer class="l-footer l-footer--recruit">
+		<div class="l-footer__container">
+			<div class="l-footer__sns">
+				<a href="https://www.facebook.com/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC-208566559229653/" target="_blank">
+					<i class="fa fa-facebook-square"></i>
+				</a>
+				<a href="https://www.instagram.com/identity.facebook/?hl=ja" target="_blank">
+					<i class="fa fa-instagram"></i>
+				</a>
+			</div>
+			<div class="l-footer__linkBox">
+				<a href="http://id-entity.jp/privacypolicy/" class="l-footer__link">
+					<i class="l-footer__angle fa fa-angle-right"></i><span class="l-footer__linkTitle">個人情報の取扱いについて</span>
+				</a>
+				<a href="/dung/views" class="l-footer__link c-link">
+					<img src="/dung/public/images/identity_white.png" alt="identity">
+				</a>
+			</div>
+			<div class="l-footer__copyright">
+				COPYRIGHT &copy;2017 identity.inc ALL RIGHTS RESERVED.
+			</div>
+		</div>
+	</footer>
+	<!-- 社員のモーダル -->
+	<div class="c-modal s-hidden" id="interview_01">
+		<div class="c-modal__head">
+			<div class="c-modal__picture">
+				<img src="/dung/public/images/interview_01.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info">
+				<span class="c-modal__occupation">Sales</span>
+				<div class="c-modal__name">SHION INOUE</div>
+				<p class="c-modal__year">2010年入社 営業</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_01.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden" id="interview_02">
+		<div class="c-modal__head">
+			<div class="c-modal__picture c-modal__picture--right">
+				<img src="/dung/public/images/interview_02.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info c-modal__info--left">
+				<span class="c-modal__occupation">Sales</span>
+				<div class="c-modal__name">YUKI SASAKI</div>
+				<p class="c-modal__year">2013年入社 営業</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_02.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden" id="interview_03">
+		<div class="c-modal__head">
+			<div class="c-modal__picture c-modal__picture--right">
+				<img src="/dung/public/images/interview_03.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info c-modal__info--left">
+				<span class="c-modal__occupation">Admin</span>
+				<div class="c-modal__name">YUKIKO HOSHINO</div>
+				<p class="c-modal__year">2013年入社 事務</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_03.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden" id="interview_04">
+		<div class="c-modal__head">
+			<div class="c-modal__picture c-modal__picture--right">
+				<img src="/dung/public/images/interview_04.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info c-modal__info--left">
+				<span class="c-modal__occupation">Admin</span>
+				<div class="c-modal__name">RYOKO KINOSHITA</div>
+				<p class="c-modal__year">2016年入社 事務</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_04.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden"  id="interview_05">
+		<div class="c-modal__head">
+			<div class="c-modal__picture">
+				<img src="/dung/public/images/interview_05.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info">
+				<span class="c-modal__occupation">Engineer</span>
+				<div class="c-modal__name">GO USAMI</div>
+				<p class="c-modal__year">2015年入社 エンジニア</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_05.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden"  id="interview_06">
+		<div class="c-modal__head">
+			<div class="c-modal__picture">
+				<img src="/dung/public/images/interview_06.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info">
+				<span class="c-modal__occupation">Engineer</span>
+				<div class="c-modal__name c-modal__name--long"><ruby>Tran Ngoc Hieu<rt>チャン ゴク ヒュウ</rt></ruby></div>
+				<p class="c-modal__year">2016年入社 エンジニア</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_06.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden" id="interview_07">
+		<div class="c-modal__head">
+			<div class="c-modal__picture c-modal__picture--right">
+				<img src="/dung/public/images/interview_07.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info c-modal__info--left">
+				<span class="c-modal__occupation">Sales</span>
+				<div class="c-modal__name">DAIKI HAYASHI</div>
+				<p class="c-modal__year">2017年入社 営業</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_07.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="c-modal s-hidden" id="interview_08">
+		<div class="c-modal__head">
+			<div class="c-modal__picture">
+				<img src="/dung/public/images/interview_08.jpg">
+			</div>
+			<button class="c-modal__btn c-btn c-btn--noShadow"><i class="fa fa-close"></i></button>
+			<div class="c-modal__info">
+				<span class="c-modal__occupation">Internship</span>
+				<div class="c-modal__name">MASAKAZU MUTO</div>
+				<p class="c-modal__year">学生 インターン</p>
+			</div>
+		</div>
+		<div class="c-modal__body">
+			<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+			<p class="c-modal__content">
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+				テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+			</p>
+			<div class="c-modal__layout">
+				<div class="c-modal__layoutItem">
+					<h3 class="c-modal__title">テキストが入ります。テキストが入ります。</h3>
+					<p class="c-modal__content">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br/>
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+				<div class="c-modal__layoutItem c-modal__layoutItem--descImg">
+					<div class="c-modal__descImg">
+						<img src="/dung/public/images/interview_08.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- トップにスクロールするボタン-->
+	<button class="c-btnScrollTop"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+	<!-- 黒いレイヤー -->
+	<div class="c-layer c-layer--underLayer s-hidden"></div>
+	<script src="/dung/public/javascripts/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+      $('#form').validetta({
+        onValid: function(e) {
+          e.preventDefault();
+          var $form = $('#form');
+          var $button = $form.find('button');
+          console.log($form.typeContacter);
+          $.ajax({
+            url: $form.attr('action'),
+            type: $form.attr('method'),
+            data: $form.serialize(),
+            timeout: 10000,
+
+            beforeSend: function() {
+              $button.attr('disabled', true);
+            },
+            complete: function() {
+              $button.attr('disabled', false);
+            },
+            success: function(result) {
+              if(result) {
+                $form[0].reset();
+                $('#iCheck').removeAttr('checked');
+                alert('送信完了しました');
+              }else{
+                alert('未入力項目があります');
+              }
+            },
+            error: function() {
+              alert('送信に失敗しました');
+            }
+				  });
+        },
+        realTime: true
+      });
+		});
+	</script>
+	<script src="/dung/public/javascripts/script_recruit.js" type="text/javascript"></script>
+	<script src="/dung/public/javascripts/validetta.js" type="text/javascript"></script>
+</body>
+</html>

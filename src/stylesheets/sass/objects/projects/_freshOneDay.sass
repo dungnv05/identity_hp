@@ -1,0 +1,77 @@
+$cover-height: 260px
+$content-percent: 44.4444%
+.p-oneday
+	height: $cover-height
+	&__title
+		margin: 70px auto
+		width: 50%
+		min-height: 80px
+		max-width: 440px
+		& > img
+			width: 100%
+	&__coverBox
+		height: $cover-height
+	&__cover
+		&--left
+			width: 100% - $content-percent
+		&--right
+			background: $theme-color
+			width: $content-percent
+		&--sales
+			background: linear-gradient(rgba(255,255,255, 0.4), rgba(255,255,255, 0.4)), url($img-path + "schedule_sales_02.jpg") no-repeat
+			background-size: cover
+			background-position: 0
+		&--engineer
+			background: linear-gradient(rgba(255,255,255, 0.4), rgba(255,255,255, 0.4)), url($img-path + "schedule_engineer_01.jpg") no-repeat
+			background-size: cover
+			background-position: 0 0px
+	&__content
+		height: 100%
+		@include layout-content-recruit-pc
+		max-width: $content-width
+		&Left
+			width: 100% - $content-percent
+		&Right
+			width: $content-percent
+			background: $theme-color
+			color: $in-cover-color
+			@include flexItemsMiddle
+			@include flexItemsCenter
+		text-align: center
+	&__desc
+		font-size: 30px
+$cover-height: 350px
+@include media($tv-size - 1)
+	.p-oneday
+		height: $cover-height
+		&__coverBox
+			height: $cover-height
+		&__cover
+			&--left
+				background-position: 0 -80px
+
+$cover-height: 130px
+@media (max-width: $tablet-size - 1)
+	.p-oneday
+		height: $cover-height * 2
+		&__title
+			width: 80%
+			margin: 35px auto 25px
+		&__coverBox
+			height: $cover-height
+		&__cover
+			&--left
+				width: 100%
+			&--right
+				width: 100%
+		&__content
+			height: $cover-height
+			&Left
+				display: none
+			&Right
+				width: 100%
+			@include flex
+			@include flexItemsMiddle
+			@include flexItemsCenter
+		&__desc
+			font-size: 22px

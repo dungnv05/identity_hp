@@ -1,0 +1,270 @@
+$requirement: '.p-requirement'
+.p-requirement
+	&--large
+		font-size: 25px
+	&__top
+		margin-top: 50px
+		width: 100%
+		position: relative
+		height: 175px
+		overflow: hidden
+		&Title
+			position: absolute
+			margin: auto
+			top: 45px
+			bottom: 0
+			right: 0
+			left: 0
+			width: 100%
+			height: 20px
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			text-align: center
+			font-size: 18px
+	&__content
+		margin-top: 45px
+	&__topimage--sp
+		width: 100%
+		opacity: 0.5
+	&__container
+		width: 93%
+		display: flex
+		flex-direction: column
+		margin: auto
+	&__philosophy
+		&__list
+			width: 100%
+		&__item
+			width: 100%
+			height: 100px
+			margin-bottom: 10px
+			background: $theme-color
+			color: #FFF
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+		&__title
+			margin-top: 30px
+			font-size: 25px
+			margin-bottom: 10px
+		&__itemTitle
+			font-size: 15px
+			margin-bottom: 10px
+		&__detail
+			display: flex
+			flex-direction: column
+			align-items: center
+			font-size: 12px
+			text-align: center
+		&__wrapper
+			margin-bottom: 40px
+			padding-bottom: 50px
+			border-bottom: 1px solid #000
+			display: flex
+			flex-direction: column
+			align-items: center
+	&__basicInfo
+		&__box
+			width: 100%
+			padding: 25px 10px
+			margin-bottom: 5px
+			background-color: #fafafa
+		&__box:last-of-type
+			margin-bottom: 0
+		&__subtitle
+			font-size: 15px
+			font-weight: 700
+			margin-bottom: 14px
+		&__wrapper
+			margin-bottom: 40px
+			padding-bottom: 50px
+			border-bottom: 1px solid #000
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			&--noPadding
+				padding: 0
+				border-bottom: none
+		&__title
+			font-size: 16px
+			margin-bottom: 25px
+		&__list
+			list-style-type: disc
+			padding-left: 16px
+		&__desc
+			margin: 0 10px 45px
+	&__job
+		// display: flex
+		// flex-direction: column
+		// align-items: center
+		&__wrapper
+			margin-bottom: 25px
+		&__title
+			font-size: 16px
+			text-align: center
+			margin-bottom: 25px
+		&List
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
+			margin-bottom: 25px
+		&Item
+			margin: 2px
+			width: 48%
+			height: 30px
+			background-color: #000
+			color: #FFF
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			& .fa-angle-down
+				position: absolute
+				right: 10px
+				font-size: 1.5em
+			&:visited
+				color: #fff
+			&:hover
+				cursor: pointer
+		&Type
+			margin-bottom: 25px
+			&__nameTable
+				width: 100%
+				margin-bottom: 25px
+			&__title
+				font-weight: 700
+				margin-bottom: 10px
+			&__name
+				border-bottom: $theme-color 1px solid
+				width: 40%
+				text-align: left
+				font-size: 15px
+				font-weight: 700
+				padding-left: 10px
+			&__space
+				border-bottom: #ccc 1px solid
+				width: 60%
+			&__item
+				width: 100%
+				padding: 10px
+				margin-bottom: 5px
+				background-color: #fafafa
+	&__btnList
+		@include flex
+		@include flexItemsAround
+		margin-bottom: 25px
+	&__btn.c-btn
+		width: 50%
+	&__btn--long.c-btn
+		width: 55%
+	&__term
+		margin: 0 10px 40px
+	&__agree
+		padding: 0 10px 25px
+		text-align: center
+		& > .c-input__checkbox
+			display: inline-block
+@media (min-width: $tablet-size )
+	.p-requirement
+		&__content
+			width: 100%
+			@include layout-content-recruit-pc
+		&__wrapper
+			max-width: 980px
+		&__top
+			margin-top: 70px
+			margin-bottom: 90px
+			height: 350px
+			background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url($img-path+"layer_recruit.jpg") center center / cover no-repeat
+			&Title
+				font-size: 36px
+		&__topimage--sp
+			display: none
+		&__message
+			text-align: center
+			margin-bottom: 90px
+		&__philosophy
+			&__wrapper
+				padding-bottom: 100px
+				margin-bottom: 90px
+			&__title
+				font-size: 30px
+				margin-top: 0
+				margin-bottom: 40px
+			&__list
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				justify-content: space-between
+			&__item
+				width: 49%
+		&__basicInfo
+			&__title
+				font-size: 30px
+			&__box
+				padding: 20px
+				display: flex
+				flex-direction: row
+				align-items: center
+			&__subtitle
+				width: 25%
+				text-align: left
+			&__detail
+				width: 75%
+		&__groupInput:first-of-type
+			margin-top: 0
+		&__groupInput
+			width: 100%
+			margin-top: 15px
+			& > .c-input__label
+				width: 10%
+			& .c-input__groupMark
+				display: none
+			& > .c-input__group
+				display: inline-block
+				width: 88%
+			& .c-input
+				width: 100%
+		&__job
+			&__wrapper
+				margin-bottom: 50px
+			&__title
+				font-size: 30px
+			&List
+				margin-bottom: 50px
+			&Item
+				width: 24%
+				height: 60px
+				& .fa-angle-down
+					font-size: 2em
+					top: 15px
+					right: 30px
+			&Type
+				margin-bottom: 50px
+				&__name
+					width: 200px
+					font-size: 24px
+					font-weight: normal
+				&__item
+					display: flex
+					flex-direction: row
+					align-items: center
+				&__title
+					width: 25%
+					text-align: center
+				&__space
+					width: auto
+		&__btnList
+			width: 50%
+			margin: 0 auto 30px
+		&__btn.c-btn
+			width: 50%
+		&__btn--long.c-btn
+			width: 65%
+		&__agree
+			padding-bottom: 40px

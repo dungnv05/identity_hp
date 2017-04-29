@@ -1,0 +1,66 @@
+.l-layout
+	position: relative
+	&__cover
+		width: 100%
+		height: 100%
+		&Box
+			position: relative
+			width: 100%
+			height: 100%
+		&--left
+			background: tomato
+		&--right
+			background: chocolate
+		&--full
+			width: 100%
+			background: chocolate
+	&__contentBox
+		position: relative
+		z-index: 1
+		@include layout-content-recruit
+	&__content
+		width: 100%
+		@include flex
+		flex-direction: column
+		&Left
+			@include flexItemsTop
+		&Right
+			@include flexItemsTop
+	&__fullContentBox
+		position: relative
+		z-index: 1
+	&__fullContent
+		&--left
+		&--right
+
+@include media-tablet
+	.l-layout
+		&__cover
+			width: 50%
+			height: 100%
+			&Box
+				position: absolute
+				@include flex
+			&--left
+			&--right
+			&--full
+		&__contentBox
+			@include layout-content-pc
+			@include flex
+		&__content
+			&--left
+				width: 50%
+			&--right
+				width: 50%
+				@include flexItemsBottom
+		&__fullContentBox
+			position: relative
+			z-index: 1
+		&__fullContent
+			position: absolute
+			width: 50%
+			top: 0
+			&--left
+				left: 0
+			&--right
+				left: 50%

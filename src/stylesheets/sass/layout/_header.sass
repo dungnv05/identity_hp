@@ -1,0 +1,342 @@
+$header-height: 50px
+
+.l-header--pc
+	display: none
+.l-header--sp
+	background-color: $background-color
+	border-bottom: 1px solid $border-color
+	&__bar
+		@include flex
+		@include flexNoWrap
+		@include flexItemsMiddle
+		@include flexItemsBetween
+		height: $header-height
+		background-color: #FFF
+	&__logo
+		padding: 6px 10px 0
+		display: inline-block
+		& img
+			height: 28px
+			width: auto
+	&__menu
+		&button
+			margin: 8px
+			width: 42px
+			height: 28px
+			position: relative
+			display: inline-block
+			float: right
+			border: 1px solid #A9A9A9
+			border-radius: 20px
+			text-align: center
+			background-color: #FFF
+			cursor: pointer
+			& .fa
+				margin: 2px
+				justify-content: center
+				align-items: center
+				font-size: 110%
+			& .fa-times
+				margin: -1px
+				justify-content: center
+				align-items: center
+				font-size: 110%
+		&List
+			display: none
+			position: absolute
+			top: $header-height
+			width: 100%
+			height: 380px
+			text-align: center
+			padding-top: 15px
+			background-color: $background-color
+			border-bottom: 1px solid $border-color
+			z-index: $head-index
+			& li:last-child
+				padding-bottom: 10px
+			& .fa-angle-right
+				color: $theme-color
+				padding-right: 20px
+				font-size: 200%
+				position: absolute
+				top: 10px
+				right: 75px
+		&Item
+			position: relative
+			display: block
+			padding: 15px 0
+			color: #000
+			font-weight: 700
+
+#message, #interview, #about, #office, #recruitment
+	position: relative
+	top: -50px
+	display: block
+#service
+	position: relative
+	top: -40px
+	display: block
+#company
+	position: relative
+	top: -40px
+	display: block
+#contact
+	position: relative
+	top: -40px
+	display: block
+#member
+	position: relative
+	top: -40px
+	display: block
+#recruit
+	position: relative
+	top: -40px
+	display: block
+#news
+	position: relative
+	top: -40px
+	display: block
+
+$header-height: 70px
+@media(min-width: $tablet-size)
+	.l-header--sp
+		display: none
+	.l-header--pc
+		display: block
+		background-color: #FFF
+		border-bottom: 1px solid $border-color
+		&__container
+			margin: 0 auto
+			max-width: $content-width
+			height: $header-height
+			color: tomato
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #FFF
+		&__logo
+			& img
+				height: 40px
+				width: auto
+		&__menu
+			&List
+				margin-right: 0
+				width: 580px
+				display: flex
+				justify-content: space-between
+			&Item
+				padding-bottom: 5px
+				color: #000
+				display: block
+				font-weight: 700
+				&.active
+					color: $theme-color
+					border-bottom: solid 3px $theme-color
+				&.active.invisible
+					color: #000
+					border-bottom: solid 3px transparent
+				&--last
+					margin-right: 0
+				&__triangle.active
+					width: 0
+					margin: auto
+					height: 0
+					border-style: solid
+					border-width: 5px 5px 0px 5px
+					border-color: $theme-color transparent transparent transparent
+				&__triangle.active.invisible
+					border-color: transparent
+	#message, #interview, #about, #office, #recruitment
+		position: relative
+		top: -70px
+		display: block
+	#service
+		position: relative
+		top: -60px
+		display: block
+	#company
+		position: relative
+		top: -60px
+		display: block
+	#contact
+		position: relative
+		top: -60px
+		display: block
+	#member
+		position: relative
+		top: -60px
+		display: block
+	#recruit
+		position: relative
+		top: -60px
+		display: block
+	#news
+		position: relative
+		top: -60px
+		display: block
+
+$header-height: 50px
+.l-header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: $head-index
+	/* 採用サイトのヘッダー */
+	&--recruit
+		height: $header-height
+		border: none
+		background-color: rgba(255,255,255,0.97)
+
+	&--recruit &--sp
+		border: none
+		background: transparent
+		&__menu
+			&button
+				color: $in-cover-color
+				margin: 0
+				width: 50px
+				height: 50px
+				background-color: $background-color
+				border: none
+				border-radius: 0
+				font-size: 150%
+				z-index: $head-index + 1
+			&List
+				z-index: $head-index + 1
+				top: $header-height
+				left: 50%
+				margin: 0
+				padding: 0
+				width: 50%
+				height: auto
+				border-bottom: none
+				border-left: 1px solid $border-color
+				border-top: 1px solid $border-color
+				& > li:last-child
+					padding: 0
+			&Item
+				color: $in-cover-color
+				border-bottom: 1px solid $in-cover-color
+				&:last-child
+
+		&__bar
+			height: $header-height
+			&--underLayer
+				background-color: transparent
+		&__logo
+			padding-top: 6px
+			& img
+				height: 28px
+
+$header-height: 70px
+@media(min-width: $tablet-size)
+	.l-header--sp
+		display: none
+	.l-header--pc
+		display: block
+		background-color: #FFF
+		border-bottom: 1px solid $border-color
+		&__container
+			margin: 0 auto
+			max-width: $content-width
+			height: $header-height
+			color: tomato
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #FFF
+		&__logo
+			padding-top: 5px
+			& img
+				height: 40px
+				width: auto
+		&__menu
+			&List
+				margin-right: 0
+				width: 580px
+				display: flex
+				justify-content: space-between
+			&Item
+				padding-bottom: 5px
+				color: #000
+				display: block
+				font-weight: 700
+				&.active
+					color: $theme-color
+					border-bottom: solid 3px $theme-color
+				&--last
+					margin-right: 0
+				&--long
+					font-size: 95%
+				&__triangle.active
+					width: 0
+					margin: auto
+					height: 0
+					border-style: solid
+					border-width: 5px 5px 0px 5px
+					border-color: $theme-color transparent transparent transparent
+	.l-header
+		/* 採用サイトのヘッダー */
+		&--recruit
+			height: $header-height
+			border: none
+			background-color: rgba(255,255,255,0.97)
+
+		&--recruit &--pc
+			border: none
+			background: transparent
+			@include layout-content-recruit-pc
+			&__container
+				height: $header-height
+				background: transparent
+			&__menu
+				&button
+					color: $in-cover-color
+					margin: 0
+					width: 40px
+					height: 40px
+					background-color: $background-color
+					border: none
+					border-radius: 0
+					font-size: 150%
+					z-index: $head-index
+				&List
+					z-index: $head-index
+					top: 40px
+					left: 50%
+					margin: 0
+					padding: 0
+					width: 84%
+					height: $header-height
+					border: none
+					@include flexItemsRight
+					& > li:last-child
+						padding: 0
+						& .l-header--pc__menuItem
+							border-right: 1px solid $background-color
+					& > li
+						width: 20%
+				&Item
+					color: $in-cover-color
+					border-right: 1px solid $in-cover-color
+					border-bottom: none
+					display: block
+					height: 100%
+					width: 100%
+					line-height: $header-height
+					white-space: nowrap
+					text-align: center
+					padding-bottom: 0
+					background: $background-color
+					box-sizing: border-box
+
+			&__bar
+				height: $header-height
+				background: transparent
+				&--underLayer
+					background-color: transparent
+			&__logo
+				padding-top: 5px
+				& img
+					height: 40px

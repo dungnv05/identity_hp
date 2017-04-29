@@ -1,0 +1,102 @@
+.p-jumbotron
+	height: 320px
+	&__cover
+		height: 320px
+		background: url($img-path + "top_recruit.png")
+		background-size: cover
+		background-position: 57%
+	&__itemBox
+	&__content
+		@include layout-content-recruit
+		@include flex
+		flex-direction: column
+		@include flexItemsMiddle
+		@include flexItemsCenter
+		height: 100%
+		width: 100%
+	&__item:first-of-type
+		margin-top: 20px
+		position: relative
+	&__itemBox
+		@include layout-content-recruit
+		@include flex
+		flex-direction: column
+		@include flexItemsMiddle
+		@include flexItemsCenter
+	&__item
+		position: relative
+		z-index: 0
+		width: 86%
+		text-align: center
+		margin-top: 5px
+		padding-bottom: 15px
+		color: $in-cover-color
+		&Title
+			position: relative
+			z-index: 1
+			font-size: 18px
+			padding-top: 10px
+		&Desc
+			position: relative
+			z-index: 1
+			font-size: 9px
+			letter-spacing: 0
+			padding-top: 5px
+		&Bg
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0.75
+			width: 100%
+			height: 100%
+			&--top
+				background: $background-color
+			&--bottom
+				background: $theme-color
+// レスポンシブ
+@include media($tablet-size)
+	.p-jumbotron
+		height: 880px
+		&__content
+			height: 880px
+			flex-direction: row
+			@include layout-content
+			width: 100%
+		&__cover
+			height: 1020px
+			background-position: 60%
+		&__item:first-of-type
+			margin: 0
+		&__itemBox
+			width: 100%
+			opacity: 1
+			position: relative
+			@include flex
+			flex-direction: row
+			@include linear-gradient(113deg, $background-color 50%, $theme-color 50%)
+		&__item
+			width: 50%
+			height: 220px
+			margin: 0
+			@include flex
+			flex-direction: column
+			@include flexItemsCenter
+			&Title
+				font-size: 36px
+			&Desc
+				font-size: 13px
+			&Bg
+				opacity: 1
+				&--top
+					background: transparent
+				&--bottom
+					background: transparent
+					// background: $theme-color
+					// @include linear-gradient(119deg, $background-color 10%, $theme-color 10%)
+			&--diagonal
+				width: 100px
+@include media($pc-size)
+	.p-jumbotron
+		&__item
+			&Desc
+				font-size: 14px

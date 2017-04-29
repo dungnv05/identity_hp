@@ -1,0 +1,30 @@
+.c-lineBreak
+	display: block
+	&--pc
+		display: inline
+	&--sp
+		display: block
+.c-line
+	height: 2px
+	width: 7%
+	border-bottom: 1.5px solid $in-cover-color
+	display: inline-block
+	margin: 0 8px 7px
+	&--inWhiteCover
+		border-bottom: 1.5px solid #000	
+
+// @media (min-width: $iphone6-size)
+// 	.c-lineBreak
+// 		&--iphone6
+@include media-tablet
+	.c-lineBreak
+		&--pc
+			display: block
+		&--sp
+			display: inline
+	.c-line
+		width: 49px
+		margin: 0 15px 10px
+		border-bottom: 2px solid $in-cover-color
+		&--inWhiteCover
+			border-bottom: 2px solid #000	

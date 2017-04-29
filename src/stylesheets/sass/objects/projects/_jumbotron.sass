@@ -1,0 +1,70 @@
+.p-jumbotron
+	&__cover
+		height: 320px
+		background: url($img-path + "layer_top_sp.jpg") no-repeat
+		background-size: 200%
+		background-position: 82% 50px
+		position: relative
+	&__content
+		@include layout-content
+	&__image
+		position: absolute
+		top: 105px
+		@include flex
+		flex-direction: column
+	&__japanese
+		width: 80%
+	&__english
+		margin-top: 10px
+		width: 65%
+
+// カバーの処理
+@include media($iphone6-size)
+	.p-jumbotron
+		&__cover
+			height: $iphone6-size
+			background-position: 80% 45px
+@include media($iphone6s-size)
+	.p-jumbotron
+		&__cover
+			height: $iphone6s-size
+@include media($mobile-size)
+	.p-jumbotron
+		&__cover
+			height: $mobile-size
+			background-size: 150%
+			background-position: 0 0
+
+// レスポンシブ
+@include media($tablet-size)
+	.p-jumbotron
+		&__content
+			width: 100%
+		&__cover
+			background: url($img-path + "layer_top.jpg") no-repeat
+			background-position: 35% 70px
+			height: 550px
+		&__image
+			position: absolute
+			top: 160px
+			@include flex
+			flex-direction: column
+			padding-left: 5%
+		&__japanese
+			width: 80%
+		&__english
+			margin-top: 20px
+			width: 65%
+
+// カバーの処理
+@include media($pc-size)
+	.p-jumbotron
+		&__cover
+			background-position: 35% -15px
+			height: 650px
+			background-size: 130%
+@include media($tv-size)
+	.p-jumbotron
+		&__cover
+			background-position: 35% -45px
+			background-size: 100%

@@ -1,0 +1,56 @@
+.p-philosophy
+	position: relative
+	background-color: $theme-color
+	color: #FFF
+	padding-bottom: 50px
+	&__content
+		@include layout-content
+		box-sizing: border-box
+	&__item
+		padding-top: 35px
+	&__title
+		font-size: 210%
+		font-weight: 400
+		letter-spacing: 3px
+		& > img
+			height: 30px
+			width: auto
+			vertical-align: middle
+	&__subTitle
+		font-size: $font-size
+		vertical-align: middle
+		letter-spacing: 2px
+		display: inline-block
+		padding-top: 3px
+	&__desc
+		letter-spacing: 1px
+		padding-top: 20px
+	&__triagle
+		border-top: 21px solid $theme-color
+		margin-top: 50px
+
+@media (min-width: $tablet-size)
+	.p-philosophy
+		padding-bottom: 60px
+		&__content
+			@include flex
+			@include flexWrap
+			width: 100%
+		&__item
+			padding-left: 5%
+			padding-right: 5%
+		&__title
+			font-size: 280%
+		&__desc
+			font-size: 86%
+		&__triagle
+			border-top: 16px solid $theme-color
+		&__subTitle
+			padding-top: 9px
+@media (min-width: $pc-size)
+	.p-philosophy
+		&__title
+			font-size: 320%
+		&__subTitle
+			padding-top: 12px
+			

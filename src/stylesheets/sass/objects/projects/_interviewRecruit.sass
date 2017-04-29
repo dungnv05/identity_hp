@@ -1,0 +1,94 @@
+$card-height: 250px
+$employee-picture-first: $img-path + "employee_card_01.jpg"
+$employee-picture-second: $img-path + "employee_card_02.jpg"
+$employee-picture-third: $img-path + "employee_card_03.jpg"
+$employee-picture-fourth: $img-path + "employee_card_04.jpg"
+$employee-picture-fifth: $img-path + "employee_card_05.jpg"
+$employee-picture-sixth: $img-path + "employee_card_06.jpg"
+$employee-picture-seventh: $img-path + "employee_card_07.jpg"
+$employee-picture-eighth: $img-path + "employee_card_08.jpg"
+.p-interview
+	&__overview
+		background: url($img-path + "layer_red_sp.png")
+		color: $in-cover-color
+		padding: 45px 10px
+	&__title
+		font-size: 18px
+		text-align: center
+	&__content
+		padding-top: 15px
+		font-size: 12px
+	&__employeeList
+		@include flex
+		@include flexWrap
+	&__employee
+		@include flexItem--6
+	&__employeeImg
+		width: 100%
+		height: $card-height
+		// height: $card-height
+		&:hover
+			cursor: pointer
+		&--first
+			background: url($employee-picture-first) no-repeat center center
+			background-size: cover
+		&--second
+			background: url($employee-picture-second) no-repeat center center
+			background-size: cover
+		&--third
+			background: url($employee-picture-third) no-repeat center center
+			background-size: cover
+		&--fourth
+			background: url($employee-picture-fourth) no-repeat center center
+			background-size: cover
+		&--fifth
+			background: url($employee-picture-fifth) no-repeat center center
+			background-size: cover
+		&--sixth
+			background: url($employee-picture-sixth) no-repeat center center
+			background-size: cover
+		&--seventh
+			background: url($employee-picture-seventh) no-repeat center center
+			background-size: cover
+		&--eighth
+			background: url($employee-picture-eighth) no-repeat center center
+			background-size: cover
+$card-height: 400px
+@include media-tablet
+	.p-interview
+		@include flex
+		@include flexWrap
+		@include flexItemsRight
+		&__overview
+			background: url($img-path + "layer_red_pc.png")
+			width: 50%
+			@include flex
+			flex-direction: column
+			@include flexItemsMiddle
+			@include flexItemsCenter
+		&__title
+			font-size: 36px
+		&__content
+			margin-top: 40px
+			padding: 0
+			font-size: 14px
+			display: inline-block
+		&__employeeList
+			@include flex
+			@include flexWrap
+			@include flexItem--12
+			&--first
+				@include flexFirst
+				@include flexItem--6
+		&__employee
+			@include flexItem--6
+			border-top: none
+			&--quarter
+				@include flexItem--3
+		&__employeeImg
+			height: $card-height
+$card-height: 500px
+@include media($tv-size)
+	.p-interview
+		&__employeeImg
+			height: $card-height

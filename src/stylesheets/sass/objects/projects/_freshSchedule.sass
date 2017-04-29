@@ -1,0 +1,84 @@
+$circle-diameter: 120px
+.p-schedule
+	&__content
+		@include layout-content-recruit-pc
+		@include flex
+		@include flexWrap
+		margin-top: 80px
+		margin-bottom: 80px
+	&__layout
+		width: 50%
+		&--right
+			padding-left: 5.5%
+	&__layout--right &__picture
+			padding: 0 0 0 120px
+	&__item
+		min-height: $circle-diameter + 20
+		overflow: hidden
+		width: 100%
+		position: relative
+	&__itemHead
+		@include flex
+		@include flexItemsMiddle
+	&__circle
+		background: $theme-color
+		height: $circle-diameter
+		width: $circle-diameter
+		&Word
+			color: $in-cover-color
+			display: inline-block
+			font-size: 20px
+	&__title
+		font-size: 18px
+		padding-top: 5px
+	& .fa
+		margin: 0 10px
+		color: $theme-color
+		font-size: 48px
+	&__rod
+		position: absolute
+		top: $circle-diameter
+		left: ($circle-diameter/2 - 4)
+		width: 1px
+		border-left: 8px solid $theme-color
+		height: 100%
+	&__picture
+		padding: 0 10% 0 120px
+		max-height: 200px
+		& > img
+			width: 100%
+			height: auto
+			max-width: 400px
+
+$circle-diameter: 75px
+@media (max-width: $tablet-size - 1)
+	.p-schedule
+		position: relative
+		padding: 0 10px
+		&__content
+			margin: 20px 0
+		&__layout
+			width: 100%
+			&--right
+				padding-left: 0
+		&__layout--right &__picture
+			padding: 0 0 0 $circle-diameter
+		&__item
+			min-height: $circle-diameter + 10
+		&__circle
+			width: $circle-diameter
+			height: $circle-diameter
+			&Word
+				font-size: 18px
+		&__rod
+			top: $circle-diameter
+			left: ($circle-diameter/2 - 2)
+			border-left: 4px solid $theme-color
+		&__title
+			font-size: 15px
+			padding-top: 7px
+		& .fa
+			margin: 0 5px
+			font-size: 30px
+		&__picture
+			padding: 0 0 0 $circle-diameter

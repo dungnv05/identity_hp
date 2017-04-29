@@ -1,0 +1,3 @@
+browserify src/javascripts/script.js --standalone XXX | uglifyjs -c > public/javascripts/script.js
+browserify src/javascripts/script_recruit.js --standalone XXX | uglifyjs -c > public/javascripts/script_recruit.js
+browserify src/javascripts/fresh_script.js --standalone XXX | uglifyjs -c > public/javascripts/fresh_script.js

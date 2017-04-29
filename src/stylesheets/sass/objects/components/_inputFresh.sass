@@ -1,0 +1,103 @@
+.c-input
+	background-color: #FFF
+	width: 100%
+	border: 2px solid #F9F5E5
+	border-radius: 3px
+	font-size: 100%
+	overflow: hidden
+	white-space: nowrap
+	padding: 5px ($font-size * 1.5)
+	box-sizing: border-box
+	-moz-appearance: none
+	-webkit-appearance: none
+	appearance: none
+	&Checkbox
+		display: inline
+	&__required
+		color: $theme-color
+		margin: 0 5px
+	&__desc
+		font-size: 86%
+		font-weight: 300
+	&--select
+		padding: 5px 35px 5px 5px
+		line-height: 1.2
+		border: #e2dedf solid 2px
+	&__select
+		&Area
+			width: 33%
+			display: inline-block
+			margin: 10px 0
+		&Box
+			position: relative
+			display: inline-block
+			width: 77%
+			margin: 10px 0
+			&--full
+				width: 100%
+		&Mark
+			height: 26px
+			position: absolute
+			top: 2px
+			right: 2px
+			pointer-events: none
+		&Suffix
+			vertical-align: middle
+	&--textarea
+		background-color: #FFF
+		border-radius: 15px
+		resize: none
+		overflow-y: auto
+		overflow-x: hidden
+		white-space: pre
+	&Radio
+		position: relative
+		display: inline-block
+		height: 100%
+		margin: 10px 0 0
+		&__circleBox
+			position: absolute
+			left: 0
+			top: 1px
+			width: 18px
+			height: 18px
+			border: 1px solid $border-color
+			border-radius: 50%
+			background-color: #FFF
+			display: inline-block
+			@include flex
+			@include flexItemsMiddle
+			@include flexItemsCenter
+		&__circle
+			color: $theme-color
+			background-color: $theme-color
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			z-index: 1
+			pointer-events: none
+
+		&__label
+			padding-left: 25px
+		& validetta-bubble
+			top: 32px
+		&--other &__circleBox
+			top: 15px
+		&--other .p-entry__formItem
+			margin-left: 10px
+			width: auto
+			display: inline-block
+
+@include media($tablet-size)
+	.c-input
+		&__desc
+			display: block
+		&__select
+			&Area
+				width: 32%
+			&Box
+				width: 75%
+				&--full
+					width: 100%
+			&Suffix
+				font-size: 20px
