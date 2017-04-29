@@ -1,5 +1,5 @@
+.gitignore
 .sass-cache/
 *.css.map
 /node_modules
-/public/stylesheets/style.css
 npm-debug.log
